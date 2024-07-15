@@ -1,0 +1,12 @@
+[Unit]
+Description=UPS Dispatcher
+After=multi-user.target
+
+[Service]
+Type=simple
+ExecStart=sudo python /home/kostya/app/main.py 
+WorkingDirectory=/home/kostya/app
+Restart=always
+
+[Install]
+WantedBy=multi-user.target
